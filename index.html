@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <span></span>
+  <div id="name"></div>
+</body>
+<script src="myVue.js"></script>
+<script>
+  const V = new Myvue({
+  data: {
+    name: 'jack',
+    family: {
+      farther: 'xiaoming'
+    },
+    age: '12'
+  }
+})
+console.log(V)
+V.$data.name="jackkkk"
+V.$data.age="100"
+V.$data.family.farther= 'jackF'
+
+  // let obj={}
+  // Object.defineProperty(obj,'name',{
+  //   enumerable: true,
+  //   // get方法：当使用obj.name时会触发。
+  //   get: function(){
+  //     return document.querySelector("#name").innerHTML 
+  //   },
+  //   // set方法：当为obj.name赋值时会触发。
+  //   set: function(a){
+  //     document.querySelector("#name").innerHTML=a
+  //   }
+  // })
+  // // 为name赋值，会触发set方法。
+  // obj.name="jac"
+  // console.log(obj.name)
+</script>
+</html>
